@@ -86,10 +86,11 @@
                     <tabBarItem key="tabBarItem" title="Settings" id="lPA-17-ntX">
                         <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="fmQ-wK-Rrx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZV-6g-Om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.56521739130437" y="510.9375"/>
+            <point key="canvasLocation" x="874" y="610"/>
         </scene>
     </scenes>
     <resources>
