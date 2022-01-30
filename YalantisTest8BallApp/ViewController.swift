@@ -11,21 +11,46 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answersLabel: UILabel!
     
-    var answer = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
+    var answers = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         guard motion == .motionShake else { return }
         
-        let randomIndex = Int.random(in: 0..<answer.count)
+        let randomIndex = Int.random(in: 0..<answers.count)
         
-        answersLabel.text = answer[randomIndex]
+        answersLabel.text = answers[randomIndex]
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchAnswer()
+
+    }
+    
+    func fetchAnswer() {
         
+        let urlString = "https://8ball.delegator.com/magic/JSON/1"
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data else { return }
+            
+            do {
+                
+                let answer = try JSONDecoder().decode(Welcome.self, from: data)
+                print(answer.magic.answer)
+            } catch let error {
+                
+                print(error)
+                
+            }
+            
+            
+        }.resume()
         
     }
 
