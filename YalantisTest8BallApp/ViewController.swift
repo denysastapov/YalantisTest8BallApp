@@ -11,27 +11,54 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answersLabel: UILabel!
     
-    var answers = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
+    var answers = ["Yes, definitely", "It is certain","Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
     
+    let urlString = "https://8ball.delegator.com/magic/JSON/1"
+    
+    var statusCode = 0
+
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
         guard motion == .motionShake else { return }
         
         let randomIndex = Int.random(in: 0..<answers.count)
         
-        answersLabel.text = answers[randomIndex]
+        if self.statusCode != 200 {
+            
+            answersLabel.text = answers[randomIndex]
+            
+        } else {
+            
+            fetchAnswer()
+            
+        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchAnswer()
+        getStatusCode()
 
     }
     
-    func fetchAnswer() {
+    func getStatusCode() {
+
+        guard let url = URL(string: urlString) else { return }
         
-        let urlString = "https://8ball.delegator.com/magic/JSON/1"
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let response = response as? HTTPURLResponse {
+            
+                self.statusCode = response.statusCode
+            
+            }
+            
+        }.resume()
+        
+    }
+    
+    func fetchAnswer() {
         
         guard let url = URL(string: urlString) else { return }
         
@@ -42,18 +69,17 @@ class ViewController: UIViewController {
             do {
                 
                 let answer = try JSONDecoder().decode(Welcome.self, from: data)
-                print(answer.magic.answer)
+                
+                DispatchQueue.main.async {
+                    self.answersLabel.text = answer.magic.answer
+                }
+                
             } catch let error {
                 
                 print(error)
                 
             }
             
-            
         }.resume()
-        
     }
-
-
 }
-
