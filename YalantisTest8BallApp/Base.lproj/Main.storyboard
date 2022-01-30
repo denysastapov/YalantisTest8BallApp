@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YalantisTest8BallApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ask me something" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-qN-2pZ">
@@ -34,6 +34,7 @@
                     <tabBarItem key="tabBarItem" title="Main" id="IqH-fd-lGu">
                         <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="zKq-BN-twN"/>
                     <connections>
                         <outlet property="answersLabel" destination="lMi-qN-2pZ" id="U69-xG-hrr"/>
                     </connections>
@@ -96,12 +97,18 @@
                         <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="fmQ-wK-Rrx"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="transferArray" id="tey-CN-4qr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZV-6g-Om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="874" y="610"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tey-CN-4qr"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

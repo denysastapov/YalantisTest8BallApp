@@ -49,5 +49,11 @@ class settingsTableViewController: UITableViewController {
         print(userChoosenAnswers)
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "transferArray") {
+            let displayVC = segue.destination as! ViewController
+            displayVC.answers = settingsTableViewController.userChoosenAnswers
+        }
+    }
 }
