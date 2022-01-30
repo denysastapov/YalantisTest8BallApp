@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answersLabel: UILabel!
     
-    var answers = ["Yes, definitely", "It is certain","Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
+    var answers = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
     
     let urlString = "https://8ball.delegator.com/magic/JSON/1"
     
