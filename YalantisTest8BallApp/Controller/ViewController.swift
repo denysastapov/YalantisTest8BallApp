@@ -7,15 +7,19 @@
 
 import UIKit
 
+import Foundation
+
 class ViewController: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet weak var answersLabel: UILabel!
     
-    var answers = ["Yes"]
+    let avaliableAnswers = UserDefaults.standard
+    
+    let answers = ["Yes", "No", "Maybe"]
     
     var getAnswers = [String]()
     
-    let urlString = "https://8ball.delegato1r.com/magic/JSON/1"
+    let urlString = "https://8ball.delegator.com/magic/JSON/1"
     
     var statusCode = 0
     
@@ -39,26 +43,8 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.delegate = self
         getStatusCode()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let allAnswers = getAnswers
-        print(allAnswers)
-        
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-
-        if viewController is ViewController {
-            print("First tab")
-        } else if viewController is settingsTableViewController {
-            print("Second tab")
-        }
     }
     
     func getStatusCode() {

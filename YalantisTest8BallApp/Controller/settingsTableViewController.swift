@@ -10,7 +10,7 @@ import UIKit
 class settingsTableViewController: UITableViewController {
     
     var userAnswersToAdd = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
-    
+        
     var userChoosenAnswers = [String]()
     
     @IBAction func addAnswer(_ sender: UISwitch) {
@@ -20,10 +20,6 @@ class settingsTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -51,13 +47,7 @@ class settingsTableViewController: UITableViewController {
     @objc func didChangeSwitch(_ sender: UISwitch) {
         
         userChoosenAnswers.append(userAnswersToAdd[sender.tag])
-        print(userChoosenAnswers)
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? ViewController else { return }
-        destinationVC.getAnswers = userChoosenAnswers
-
-    }
 }

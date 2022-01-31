@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YalantisTest8BallApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ask me something" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-qN-2pZ">
-                                <rect key="frame" x="58" y="417" width="283" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ask me something and shake your device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-qN-2pZ">
+                                <rect key="frame" x="16" y="380" width="383" height="137"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,8 +27,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="94L-EI-8Kr"/>
-                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="AZm-oi-fYg"/>
+                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ca-zv-sW4"/>
+                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MeJ-FP-3Wr"/>
+                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lHr-vI-92e"/>
+                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="336" id="stY-Uv-WHg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="IqH-fd-lGu">
@@ -97,18 +99,12 @@
                         <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="fmQ-wK-Rrx"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="76s-y2-c2k"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZV-6g-Om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="874" y="610"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="76s-y2-c2k"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

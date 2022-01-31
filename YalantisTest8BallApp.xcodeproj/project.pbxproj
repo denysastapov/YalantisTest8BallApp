@@ -62,18 +62,42 @@
 		D517C93727A541D6007030D8 /* YalantisTest8BallApp */ = {
 			isa = PBXGroup;
 			children = (
-				D517C93827A541D6007030D8 /* AppDelegate.swift */,
-				D517C93A27A541D6007030D8 /* SceneDelegate.swift */,
-				D517C94E27A56735007030D8 /* Answer.swift */,
-				D517C93C27A541D6007030D8 /* ViewController.swift */,
-				D517C95627A7BEE6007030D8 /* TabBarViewController.swift */,
-				D517C93E27A541D6007030D8 /* Main.storyboard */,
-				D517C94C27A5557D007030D8 /* settingsTableViewController.swift */,
+				D517C95927A85A1F007030D8 /* Model */,
+				D517C95A27A85A27007030D8 /* View */,
+				D517C95827A859F5007030D8 /* Controller */,
 				D517C94127A541D8007030D8 /* Assets.xcassets */,
 				D517C94327A541D8007030D8 /* LaunchScreen.storyboard */,
 				D517C94627A541D8007030D8 /* Info.plist */,
 			);
 			path = YalantisTest8BallApp;
+			sourceTree = "<group>";
+		};
+		D517C95827A859F5007030D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D517C93827A541D6007030D8 /* AppDelegate.swift */,
+				D517C93A27A541D6007030D8 /* SceneDelegate.swift */,
+				D517C93C27A541D6007030D8 /* ViewController.swift */,
+				D517C94C27A5557D007030D8 /* settingsTableViewController.swift */,
+				D517C95627A7BEE6007030D8 /* TabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D517C95927A85A1F007030D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D517C94E27A56735007030D8 /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D517C95A27A85A27007030D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D517C93E27A541D6007030D8 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
