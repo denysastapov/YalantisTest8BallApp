@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="873.91304347826099" y="-135.26785714285714"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="GT4-Lc-KjF">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FDj-E8-Dqb" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FDj-E8-Dqb" customClass="TabBarViewController" customModule="YalantisTest8BallApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sGd-oK-Noe">
                         <autoresizingMask key="autoresizingMask"/>
@@ -98,7 +98,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="fmQ-wK-Rrx"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="transferArray" id="tey-CN-4qr"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="76s-y2-c2k"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZV-6g-Om1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +107,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tey-CN-4qr"/>
+        <segue reference="76s-y2-c2k"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>

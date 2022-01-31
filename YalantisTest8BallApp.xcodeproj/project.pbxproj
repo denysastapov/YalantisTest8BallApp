@@ -15,6 +15,7 @@
 		D517C94527A541D8007030D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D517C94327A541D8007030D8 /* LaunchScreen.storyboard */; };
 		D517C94D27A5557D007030D8 /* settingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517C94C27A5557D007030D8 /* settingsTableViewController.swift */; };
 		D517C94F27A56735007030D8 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517C94E27A56735007030D8 /* Answer.swift */; };
+		D517C95727A7BEE7007030D8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517C95627A7BEE6007030D8 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D517C94627A541D8007030D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D517C94C27A5557D007030D8 /* settingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsTableViewController.swift; sourceTree = "<group>"; };
 		D517C94E27A56735007030D8 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		D517C95627A7BEE6007030D8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D517C93A27A541D6007030D8 /* SceneDelegate.swift */,
 				D517C94E27A56735007030D8 /* Answer.swift */,
 				D517C93C27A541D6007030D8 /* ViewController.swift */,
+				D517C95627A7BEE6007030D8 /* TabBarViewController.swift */,
 				D517C93E27A541D6007030D8 /* Main.storyboard */,
 				D517C94C27A5557D007030D8 /* settingsTableViewController.swift */,
 				D517C94127A541D8007030D8 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				D517C93D27A541D6007030D8 /* ViewController.swift in Sources */,
 				D517C94F27A56735007030D8 /* Answer.swift in Sources */,
 				D517C93927A541D6007030D8 /* AppDelegate.swift in Sources */,
+				D517C95727A7BEE7007030D8 /* TabBarViewController.swift in Sources */,
 				D517C93B27A541D6007030D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
