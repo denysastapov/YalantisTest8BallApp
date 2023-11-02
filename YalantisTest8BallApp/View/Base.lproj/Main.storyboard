@@ -18,8 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ask me something and shake your device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-qN-2pZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me something and shake your device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMi-qN-2pZ">
                                 <rect key="frame" x="16" y="380" width="383" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="XdB-4O-rOs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,8 +32,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lMi-qN-2pZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ca-zv-sW4"/>
+                            <constraint firstItem="lMi-qN-2pZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="C2V-I3-NdH"/>
                             <constraint firstItem="lMi-qN-2pZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MeJ-FP-3Wr"/>
                             <constraint firstItem="lMi-qN-2pZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lHr-vI-92e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lMi-qN-2pZ" secondAttribute="trailing" constant="15" id="pok-v8-ODa"/>
                             <constraint firstItem="lMi-qN-2pZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="332" id="stY-Uv-WHg"/>
                         </constraints>
                     </view>

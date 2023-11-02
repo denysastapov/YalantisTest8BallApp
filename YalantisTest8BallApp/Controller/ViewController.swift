@@ -31,6 +31,10 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getStatusCode()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,10 +73,8 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
 extension ViewController: SecondViewControllerDelegate {
     func addToAnswersArray(text: String) {
         answers.append(text)
-        print(answers)
     }
     func removeFromAnswersArray(text: String) {
         answers = answers.filter {$0 != text}
-        print(answers)
     }
 }
