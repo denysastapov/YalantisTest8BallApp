@@ -1,0 +1,14 @@
+//
+//  GetAnswerResponse.swift
+//  YalantisTest8BallApp
+//
+//  Created by Denys Astapov on 30.01.2022.
+//
+
+import Foundation
+
+struct GetAnswerResponse {
+    
+    
+    
+}
