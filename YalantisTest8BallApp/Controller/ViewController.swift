@@ -9,7 +9,7 @@ import UIKit
 
 import Foundation
 
-protocol SecondViewControllerDelegate: AnyObject {
+protocol SecondViewControllerDelegate {
     func addToAnswersArray(text: String)
     func removeFromAnswersArray(text: String)
 }
@@ -18,21 +18,11 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet weak var answersLabel: UILabel!
     var answers = ["Yes", "No", "Maybe"]
-    let urlString = "https://www.eightballapi.com/api"
-    var statusCode = 0
+    private let networkManager = NetworkManager()
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         guard motion == .motionShake else { return }
-        let randomIndex = Int.random(in: 0..<answers.count)
-        if self.statusCode != 200 {
-            answersLabel.text = answers[randomIndex]
-        } else {
-            fetchAnswer()
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        getStatusCode()
+        fetchAnswer()
     }
     
     override func viewDidLoad() {
@@ -43,31 +33,24 @@ class ViewController: UIViewController, UITabBarControllerDelegate {
                 settingsViewController.delegate = self
             }
         }
-        
-        getStatusCode()
     }
     
-    func getStatusCode() {
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let response = response as? HTTPURLResponse {
-                self.statusCode = response.statusCode
-            }
-        }.resume()
+    func setRandomAnswer() {
+        let randomIndex = Int.random(in: 0..<self.answers.count)
+        self.answersLabel.text = self.answers[randomIndex]
     }
+    
     func fetchAnswer() {
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return }
-            do {
-                let answer = try JSONDecoder().decode(ReadingData.self, from: data)
-                DispatchQueue.main.async {
-                    self.answersLabel.text = answer.reading
-                }
-            } catch let error {
-                print(error)
+        if !networkManager.isNerworkAllowed {
+            setRandomAnswer()
+        }
+        networkManager.getAnswer { answer in
+            if let answer = answer {
+                self.answersLabel.text = answer
+            } else {
+                self.setRandomAnswer()
             }
-        }.resume()
+        }
     }
 }
 extension ViewController: SecondViewControllerDelegate {

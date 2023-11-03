@@ -16,6 +16,8 @@
 		D517C94D27A5557D007030D8 /* settingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517C94C27A5557D007030D8 /* settingsTableViewController.swift */; };
 		D517C94F27A56735007030D8 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517C94E27A56735007030D8 /* Answer.swift */; };
 		D517C95727A7BEE7007030D8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517C95627A7BEE6007030D8 /* TabBarViewController.swift */; };
+		D5EA80D12AF52DC800ED0931 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = D5EA80D02AF52DC800ED0931 /* Reachability */; };
+		D5EA80D32AF52E1B00ED0931 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EA80D22AF52E1B00ED0931 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		D517C94C27A5557D007030D8 /* settingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsTableViewController.swift; sourceTree = "<group>"; };
 		D517C94E27A56735007030D8 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		D517C95627A7BEE6007030D8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D5EA80D22AF52E1B00ED0931 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EA80D12AF52DC800ED0931 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 		D517C92C27A541D6007030D8 = {
 			isa = PBXGroup;
 			children = (
+				D5EA80D22AF52E1B00ED0931 /* NetworkManager.swift */,
 				D517C93727A541D6007030D8 /* YalantisTest8BallApp */,
 				D517C93627A541D6007030D8 /* Products */,
 			);
@@ -116,6 +121,9 @@
 			dependencies = (
 			);
 			name = YalantisTest8BallApp;
+			packageProductDependencies = (
+				D5EA80D02AF52DC800ED0931 /* Reachability */,
+			);
 			productName = YalantisTest8BallApp;
 			productReference = D517C93527A541D6007030D8 /* YalantisTest8BallApp.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +152,9 @@
 				Base,
 			);
 			mainGroup = D517C92C27A541D6007030D8;
+			packageReferences = (
+				D5EA80CF2AF52DC800ED0931 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = D517C93627A541D6007030D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,6 +185,7 @@
 				D517C94D27A5557D007030D8 /* settingsTableViewController.swift in Sources */,
 				D517C93D27A541D6007030D8 /* ViewController.swift in Sources */,
 				D517C94F27A56735007030D8 /* Answer.swift in Sources */,
+				D5EA80D32AF52E1B00ED0931 /* NetworkManager.swift in Sources */,
 				D517C93927A541D6007030D8 /* AppDelegate.swift in Sources */,
 				D517C95727A7BEE7007030D8 /* TabBarViewController.swift in Sources */,
 				D517C93B27A541D6007030D8 /* SceneDelegate.swift in Sources */,
@@ -402,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5EA80CF2AF52DC800ED0931 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5EA80D02AF52DC800ED0931 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5EA80CF2AF52DC800ED0931 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D517C92D27A541D6007030D8 /* Project object */;
 }

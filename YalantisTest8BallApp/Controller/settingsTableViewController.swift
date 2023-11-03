@@ -9,7 +9,7 @@ import UIKit
 
 class settingsTableViewController: UITableViewController {
     
-    weak var delegate: SecondViewControllerDelegate?
+    var delegate: SecondViewControllerDelegate?
     
     var userAnswersToAdd = ["Yes, definitely", "It is certain", "Without a doubt", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
     
