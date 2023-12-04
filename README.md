@@ -1,18 +1,27 @@
 # YalantisTest8BallApp
-8 ball app
 
+![Simulator Screen Recording - iPhone 15 - 2023-12-04 at 11 31 02](https://github.com/denysastapov/YalantisTest8BallApp/assets/38051100/842eb9fe-fa63-4a5f-b29b-63acd6fb1cc4)
 
-User should shake the device to get an answer.
-Application gets random answers from endpoint
-https://8ball.delegator.com/magic/JSON/<question_string>. 
-NOTE: 
-URL changed to https://www.eightballapi.com/api
+## Description
+This is a simple mobile application that provides users with random answers by shaking their device. The app communicates with an external endpoint, EightBallAPI, to fetch random answers. In case of internet connection issues or request failure, the application falls back on a set of hardcoded answers.
 
-In case of internet connection absence or request failure, application uses one of hardcoded
-answers
-Application should have two screens: Main and Settings
-Main screen contains call-to-shake text or answer, depending on the current application state.
-Settings screen allows the user to set and save hardcoded answers like ""Just do it!"",
-""Change your mind"", etc.
-You are free to use any design/layout you want.
-You are free to add any other rules/functionality if they don't counter described ones.
+## Features
+Shake your device to get a random answer.
+Main screen dynamically switches between displaying a call-to-shake text and the actual answer based on the application state.
+Settings screen for users to customize and save their own set of hardcoded answers.
+The app gracefully handles internet connection issues by using predefined fallback answers.
+Intuitive and user-friendly design.
+
+## Usage
+Launch the application.
+Shake your device to get a random answer.
+Navigate to the Settings screen to customize and save your own set of answers.
+
+## Installation
+To run the application locally, follow these steps:
+
+## Dependencies
+Used Reachability for internet connection detection
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit/) file for details.
