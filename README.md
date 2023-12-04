@@ -20,6 +20,11 @@ Navigate to the Settings screen to customize and save your own set of answers.
 ## Installation
 To run the application locally, follow these steps:
 
+Clone the repository.
+Open the project in Xcode.
+
+Build and run the application on a simulator or physical device.
+
 ## Dependencies
 Used Reachability for internet connection detection
 
